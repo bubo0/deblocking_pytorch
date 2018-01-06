@@ -8,4 +8,4 @@ BSD500
     
 Convert image into YCbCr and only keep Y channel (use split)
 
-split the image into sub image with the size of 32\*32 and the stride of 10
+split the image into sub image with size of 32\*32 and stride of 10
