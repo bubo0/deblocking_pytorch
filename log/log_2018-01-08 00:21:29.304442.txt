@@ -1,0 +1,6 @@
+model: ARCNN_deform
+batchSize: 512
+testBatchSize: 30
+nEpochs: 50
+learningRate: 0.0001
+

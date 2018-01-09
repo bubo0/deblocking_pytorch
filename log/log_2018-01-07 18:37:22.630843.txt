@@ -1,0 +1,5 @@
+batchSize: 128
+testBatchSize: 30
+nEpochs: 100
+learningRate: 0.0001
+
