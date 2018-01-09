@@ -41,7 +41,7 @@ print("===> Building logfile")
 output = open(logfile,'a+')
 # output = open("log_"+str(datetime.now())+".txt")
 # output = open("train_result.txt")
-output.write("batchSize: {}\ntestBatchSize: {}\nnEpochs: {}\nlearningRate: {}\n\n".format(opt.batchSize, opt.testBatchSize, opt.nEpochs, opt.lr))
+output.write("batchSize: {}\ntestBatchSize: {}\nnEpochs: {}\nlearningRate: {}\n\nEpoch |PSNR before |PSNR after".format(opt.batchSize, opt.testBatchSize, opt.nEpochs, opt.lr))
 output.close()
 
 cuda = opt.cuda
