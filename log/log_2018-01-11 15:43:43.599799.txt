@@ -1,0 +1,10 @@
+batchSize: 1
+testBatchSize: 30
+nEpochs: 30
+learningRate: 0.0001
+
+Epoch |PSNR before |PSNR after1  28.25701  12.41308
+2  27.99064  12.21529
+3  28.64500  17.09033
+4  27.94235  18.12387
+5  28.03511  18.84615

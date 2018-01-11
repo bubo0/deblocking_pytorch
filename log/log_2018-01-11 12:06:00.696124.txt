@@ -1,0 +1,6 @@
+batchSize: 1
+testBatchSize: 30
+nEpochs: 30
+learningRate: 0.0001
+
+Epoch |PSNR before |PSNR after
