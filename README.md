@@ -1,5 +1,5 @@
 # deblocking_pytorch
-Pytorch version for image deblocking using CNN
+PyTorch version for image deblocking using ARCNN and ARCNN with Offset Convolution.
 
 References:
 
