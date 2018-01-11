@@ -16,7 +16,7 @@ import argparse
 
 from datetime import datetime
 
-logfile = "log/log_" + str(datetime.now()) + ".txt"
+logfile = "log/log_ARCNN_" + str(datetime.now()) + ".txt"
 train_data_path = "dataset/train_data.h5"
 test_data_path = "dataset/test_data.h5"
 checkpoint_path = "checkpoint_ARCNN/"
@@ -128,10 +128,11 @@ def test(epoch, test_data, test_batch_size):
     output = open(logfile, 'a+')
     output.write("{} {: .5f} {: .5f}\n".format(epoch, (avg_psnr1/iter_num), (avg_psnr2/iter_num)))
     output.close()
+
 def checkpoint(epoch):
     # model_out_path = "model_epoch_{}.pth".format(epoch) # is that all right? 
     # torch.save(model, checkpoint_path+model_out_path)
-    torch.save(model.state_dict(), checkpoint_path+("checkpoint_epoch_{}.pkl".format(epoch))) # use this line to save parameters only 
+    torch.save(model.state_dict(), checkpoint_path+("checkpoint_ARCNN_epoch_{}.pkl".format(epoch))) # use this line to save parameters only 
     print("Checkpoint saved to {}".format(checkpoint_path))
 
 # can I open 2 files at one time? 
