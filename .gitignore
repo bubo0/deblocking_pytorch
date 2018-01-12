@@ -1,6 +1,7 @@
 # ignore the images, image sets (*.h5, *.tar.gz)
 *.bmp
 *.jpg
+*.png
 *.h5
 *.tar.gz
 

@@ -37,10 +37,10 @@ class NetARCNN(nn.Module):
         super(NetARCNN, self).__init__()
 
         self.relu = nn.ReLU()
-        self.conv1 = nn.Conv2d(1, 64, 9, 1, 4) # does padding 0 means "same"?
+        self.conv1 = nn.Conv2d(1, 64, 9, 1, 4)
         self.conv2 = nn.Conv2d(64, 32, 7, 1, 3)
         self.conv3 = nn.Conv2d(32, 16, 1, 1, 0)
-        self.conv4 = nn.Conv2d(16, 1, 5, 1, 2) # why is padding 9 necessary???? 
+        self.conv4 = nn.Conv2d(16, 1, 5, 1, 2)
 
 	self._initialize_weights()
 
