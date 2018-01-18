@@ -1,6 +1,6 @@
 from __future__ import print_function
 import argparse
-
+import time 
 import numpy as np
 # import h5py
 from skimage.measure import compare_psnr as psnr
@@ -64,7 +64,14 @@ if opt.cuda:
     input = input.cuda()
     target0 = target0.cuda()
 
-output = model(input)
+a = time.time()
+
+for index in range(300):
+
+    output = model(input)
+
+b = time.time() - a
+print("time spent for deblocking 300 images: ", b, "s\nMeaning that the deblocking rate is ", 300/b, "fps")
 
 criterion = nn.MSELoss()
 mse1 = criterion(input, target0)
