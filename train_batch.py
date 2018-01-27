@@ -97,7 +97,6 @@ def train(epoch, train_data, batch_size):
     print("===> Epoch {} Complete: Avg. Loss: {:.6f}".format(epoch, epoch_loss / iter_num))
     
 
-
 def test(epoch, test_data, test_batch_size):
     avg_psnr1 = 0
     avg_psnr2 = 0
@@ -135,15 +134,13 @@ def checkpoint(epoch):
     torch.save(model.state_dict(), checkpoint_path+("checkpoint_ARCNN_epoch_{}.pkl".format(epoch))) # use this line to save parameters only 
     print("Checkpoint saved to {}".format(checkpoint_path))
 
-# can I open 2 files at one time? 
-# A: Sure
 
-train_data = h5py.File(train_data_path, "r")
-test_data = h5py.File(test_data_path, "r")
+if __name__ == '__main__':
+    train_data = h5py.File(train_data_path, "r")
+    test_data = h5py.File(test_data_path, "r")
 
-
-for epoch in range(1, opt.nEpochs + 1):
-    train(epoch, train_data, opt.batchSize)
-    test(epoch, test_data, opt.testBatchSize)
-    checkpoint(epoch)
+    for epoch in range(1, opt.nEpochs + 1):
+        train(epoch, train_data, opt.batchSize)
+        test(epoch, test_data, opt.testBatchSize)
+        checkpoint(epoch)
 
