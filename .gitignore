@@ -4,6 +4,7 @@
 *.png
 *.h5
 *.tar.gz
+*.swp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
